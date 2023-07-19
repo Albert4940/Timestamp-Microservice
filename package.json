@@ -1,0 +1,34 @@
+{
+  "name": "fcc-api-timestamp-microservice",
+  "version": "1.0.0",
+  "description": "An FCC Backend Challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.12.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Albert4940/Timestamp-Microservice.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "freeCodeCamp"
+  ],
+  "author": "Albert-Mary Dorce",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Albert4940/Timestamp-Microservice/issues"
+  },
+  "homepage": "https://github.com/Albert4940/Timestamp-Microservice#readme",
+  "devDependencies": {
+    "prettier": "3.0.0"
+  }
+}
