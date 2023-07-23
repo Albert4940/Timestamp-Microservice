@@ -17,7 +17,21 @@ app.get("/", (req, res) => {
 
 // Function
 const handleDate = (date) => {
-  const newDate = date ? new Date(date) : new Date(Date.now());
+  let newDate = date ? new Date(date) : new Date(Date.now());
+
+  if (newDate.toString() === "Invalid Date") {
+    const dateTimestamp = new Date(Number(date));
+    console.log(dateTimestamp.toString());
+    if (dateTimestamp.toString() === "Invalid Date") {
+      return { error: dateTimestamp.toString() };
+    } else {
+      console.log("before" + Date.parse(dateTimestamp));
+      newDate = dateTimestamp;
+      console.log("newDate" + newDate);
+    }
+  }
+  //else newDate = new Date(newDate * 1000);
+
   const unixTime = Date.parse(newDate);
   return { unix: unixTime, utc: newDate.toUTCString() };
 };
